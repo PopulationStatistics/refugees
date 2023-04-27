@@ -12,3 +12,5 @@ LazyData: true
 Depends: 
     R (>= 3.5)
 RoxygenNote: 7.2.3
+Imports: 
+    tibble
