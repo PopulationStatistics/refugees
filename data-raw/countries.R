@@ -1,5 +1,6 @@
 library(tidyverse)
 library(readxl)
+library(rvest)
 library(httr)
 
 tmpf <- fs::file_temp(ext = "xlsx")
@@ -16,5 +17,12 @@ countries <-
          unsd_region = `UNSD Region name`,
          unsd_subregion = `UNSD Sub-region name`,
          sdg_region = `SDG Region name`)
+
+m49 <- session("https://unstats.un.org/unsd/methodology/m49/overview") |> html_table() |> pluck(1)
+
+countries <-
+  left_join(countries,
+            m49 |> select(iso_code = X12, unsd_imregion = X8)) |>
+  relocate(unsd_imregion, .after = unsd_subregion)
 
 usethis::use_data(countries, overwrite = TRUE)
