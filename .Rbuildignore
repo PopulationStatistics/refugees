@@ -2,3 +2,7 @@
 ^\.Rproj\.user$
 ^data-raw$
 ^LICENSE\.md$
+^cran-comments\.md$
+^docs$
+^pkgdown$
+^_pkgdown\.yml$
