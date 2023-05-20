@@ -4,8 +4,18 @@
 \name{nansen-package}
 \alias{nansen}
 \alias{nansen-package}
-\title{nansen: What the Package Does (Title Case)}
+\title{nansen: UNHCR’s Refugee Population Statistics Database}
 \description{
-More about what it does (maybe more than one line) Use four spaces when indenting paragraphs within the Description.
+The database contains information about forcibly displaced populations spanning more than 70 years of statistical activities. It covers displaced populations such as refugees, asylum-seekers and internally displaced people, including their demographics. Stateless people are also included, most of who have never been displaced. The database also reflects the different types of solutions for displaced populations such as repatriation or resettlement.
+}
+\author{
+\strong{Maintainer}: Hisham Galal \email{galal@unhcr.org}
+
+Other contributors:
+\itemize{
+  \item Ahmadou Dicko \email{mail@ahmadoudicko.com} [contributor]
+  \item UNHCR [copyright holder]
+}
+
 }
 \keyword{internal}

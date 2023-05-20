@@ -1,0 +1,18 @@
+url: https://galalh.github.io/nansen/
+template:
+  package: unhcrtemplate
+  bootstrap: 5
+
+reference:
+- title: "Datasets"
+  contents:
+  - population
+  - demographics
+  - asylum_applications
+  - asylum_decisions
+  - solutions
+  - idmc
+  - unrwa
+- title: "Misc"
+  contents:
+  - countries
