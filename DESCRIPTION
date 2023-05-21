@@ -1,6 +1,6 @@
 Package: nansen
 Type: Package
-Title: UNHCR’s Refugee Population Statistics Database
+Title: UNHCR Refugee Population Statistics Database
 Version: 2022.06.0
 Authors@R: c(person(given = "Hisham",
                     family = "Galal",
@@ -10,9 +10,10 @@ Authors@R: c(person(given = "Hisham",
                     family = "Dicko",
                     email = "mail@ahmadoudicko.com",
                     role = "ctb"),
-	           person("UNHCR",
-	                  role = "cph"))
-Description: The database contains information about forcibly displaced populations
+	     person("UNHCR",
+                    role = "cph"))
+Description: The UNHCR Refugee Population Statistics Database
+    contains information about forcibly displaced populations
     spanning more than 70 years of statistical activities.
     It covers displaced populations such as refugees, asylum-seekers and
     internally displaced people, including their demographics.
