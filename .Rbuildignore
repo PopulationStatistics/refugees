@@ -2,7 +2,12 @@
 ^\.Rproj\.user$
 ^data-raw$
 ^LICENSE\.md$
+^\_pkgdown\.yml$
+^NEWS\.md$
 ^cran-comments\.md$
+^README\.Rmd$
+^README\.html$
+^CODE\_OF\_CONDUCT\.md$
+^\.lintr$
+^revdep$
 ^docs$
-^pkgdown$
-^_pkgdown\.yml$
