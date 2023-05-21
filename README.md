@@ -1,3 +1,4 @@
+
 # nansen
 
 [![CRAN
@@ -52,12 +53,16 @@ fields each dataset provides.
 
 ## Installation
 
-You can install the development version of `nansen` using the `pak`
-package:
+Install either from CRAN with:
 
 ``` r
-## install.packages("pak")
-pak::pkg_install("galalh/nansen")
+install.packages("nansen")
+```
+
+Or retrieve the development version from Github with:
+
+``` r
+remotes::install_github("galalH/nansen")
 ```
 
 ## Usage
@@ -98,19 +103,19 @@ nansen::population |>
 
 ## Why `nansen`?
 
-The package is named in homage to [Fridtjof Wedel-Jarlsberg
-Nansen](https://en.wikipedia.org/wiki/Fridtjof_Nansen), 
-a Norwegian explorer, scientist, diplomat, and humanitarian
-who significantly contributed to assisting displaced persons following
-World War I. Serving as the League of Nations High Commissioner for
-Refugees, Nansen developed the “Nansen Passport”, a critical tool that
-allowed stateless persons to cross borders legally. His groundbreaking
-work earned him the Nobel Peace Prize in 1922 and laid the foundation
-for modern refugee law.
+The package is named as homage to [Fridtjof Wedel-Jarlsberg
+Nansen](https://en.wikipedia.org/wiki/Fridtjof_Nansen), a Norwegian
+explorer, scientist, diplomat, and humanitarian who significantly
+contributed to assisting displaced persons following World War I.
+Serving as the League of Nations High Commissioner for Refugees, Nansen
+developed the “Nansen Passport”, a critical tool that allowed stateless
+persons to cross borders legally. His groundbreaking work earned him the
+Nobel Peace Prize in 1922 and laid the foundation for modern refugee
+law.
 
-By naming this package `nansen`, we pay tribute to his lasting legacy
-in service of forcibly displaced people. Our hope is that this
-tool aids in continuing this legacy of understanding, assisting, and
+By naming this package `nansen`, we pay tribute to his lasting legacy in
+service of forcibly displaced people worldwide. Our hope is that this
+package aids in continuing this legacy of understanding, assisting, and
 finding solutions for displaced populations worldwide.
 
 ## License
