@@ -7,25 +7,25 @@
 \format{
 A tibble.
 \describe{
- \item{year}{The year (e.g. 2020).}
- \item{coo_name}{Country of origin name.}
- \item{coo}{Country of origin UNHCR code.}
- \item{coo_iso}{Country of origin ISO code.}
- \item{coa_name}{Country of asylum name.}
- \item{coa}{Country of asylum UNHCR code.}
- \item{coa_iso}{Country of asylum ISO code.}
- \item{procedure_type}{The procedure type describes the authority with whom the asylum claim was lodged.
- It can be one of: \code{G} – Government, \code{J} - Joint, \code{U} – UNHCR.}
- \item{app_type}{The application type describes the stage of the procedure.
- Common values are \code{N} (New), \code{R} (Repeat) and \code{A} (Appeal).}
- \item{dec_level}{The decision level provides more detail of the stage of the procedure.
- Common values are \code{NA} (New applications), \code{RA} (repeat/reopened applications) and
- \code{AR} (administrative review).}
- \item{app_pc}{The data type describes whether the data provided reflects cases or persons.
- The most common situation is for the data on asylum applications lodged to reflect persons,
- but in certain situations (e.g USA), the data provided by governments is at the level of cases.
- A case can contain information on one or more persons.}
- \item{applied}{The total number of asylum claims for the given dataset.}
+\item{year}{The year (e.g. 2020).}
+\item{coo_name}{Country of origin name.}
+\item{coo}{Country of origin UNHCR code.}
+\item{coo_iso}{Country of origin ISO code.}
+\item{coa_name}{Country of asylum name.}
+\item{coa}{Country of asylum UNHCR code.}
+\item{coa_iso}{Country of asylum ISO code.}
+\item{procedure_type}{The procedure type describes the authority with whom the asylum claim was lodged.
+It can be one of: \code{G} – Government, \code{J} - Joint, \code{U} – UNHCR.}
+\item{app_type}{The application type describes the stage of the procedure.
+Common values are \code{N} (New), \code{R} (Repeat) and \code{A} (Appeal).}
+\item{dec_level}{The decision level provides more detail of the stage of the procedure.
+Common values are \code{NA} (New applications), \code{RA} (repeat/reopened applications) and
+\code{AR} (administrative review).}
+\item{app_pc}{The data type describes whether the data provided reflects cases or persons.
+The most common situation is for the data on asylum applications lodged to reflect persons,
+but in certain situations (e.g USA), the data provided by governments is at the level of cases.
+A case can contain information on one or more persons.}
+\item{applied}{The total number of asylum claims for the given dataset.}
 }
 }
 \source{

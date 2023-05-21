@@ -7,17 +7,17 @@
 \format{
 A tibble.
 \describe{
- \item{year}{The year (e.g. 2020).}
- \item{coo_name}{Country of origin name.}
- \item{coo}{Country of origin UNHCR code.}
- \item{coo_iso}{Country of origin ISO code.}
- \item{coa_name}{Country of asylum name.}
- \item{coa}{Country of asylum UNHCR code.}
- \item{coa_iso}{Country of asylum ISO code.}
- \item{returned_refugees}{The number of refugee returnees.}
- \item{resettlement}{The number of resettlement arrivals.}
- \item{naturalisation}{The number of refugees that have naturalised.}
- \item{returned_idps}{The number of IDP returnees.}
+\item{year}{The year (e.g. 2020).}
+\item{coo_name}{Country of origin name.}
+\item{coo}{Country of origin UNHCR code.}
+\item{coo_iso}{Country of origin ISO code.}
+\item{coa_name}{Country of asylum name.}
+\item{coa}{Country of asylum UNHCR code.}
+\item{coa_iso}{Country of asylum ISO code.}
+\item{returned_refugees}{The number of refugee returnees.}
+\item{resettlement}{The number of resettlement arrivals.}
+\item{naturalisation}{The number of refugees that have naturalised.}
+\item{returned_idps}{The number of IDP returnees.}
 }
 }
 \source{

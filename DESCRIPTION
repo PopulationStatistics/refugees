@@ -10,21 +10,25 @@ Authors@R: c(person(given = "Hisham",
                     family = "Dicko",
                     email = "mail@ahmadoudicko.com",
                     role = "ctb"),
-	           person("UNHCR",
-	                  role = "cph"))
-Description: The UNHCR Refugee Population Statistics Database 
-    contains information about forcibly displaced populations 
-    spanning more than 70 years of statistical activities. 
-    It covers displaced populations such as refugees, asylum-seekers and 
-    internally displaced people, including their demographics. 
-    Stateless people are also included, most of who have never been displaced. 
-    The database also reflects the different types of solutions 
+             person("UNHCR",
+                    role = "cph"))
+Description: The UNHCR Refugee Population Statistics Database
+    contains information about forcibly displaced populations
+    spanning more than 70 years of statistical activities.
+    It covers displaced populations such as refugees, asylum-seekers and
+    internally displaced people, including their demographics.
+    Stateless people are also included, most of who have never been displaced.
+    The database also reflects the different types of solutions
     for displaced populations such as repatriation or resettlement.
 License: CC0
-Encoding: UTF-8
 LazyData: true
-Depends: 
+Depends:
     R (>= 3.5)
+Imports:
+    tibble (>= 3.2.0)
+Suggests:
+    testthat (>= 3.1.0)
+Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
-Imports: 
-    tibble
+Encoding: UTF-8
+Config/testthat/edition: 3
