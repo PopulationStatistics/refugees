@@ -2,7 +2,8 @@
 .Rhistory
 .RData
 .Ruserdata
-.html
+*.html
 docs/
 docs
+README.html
 *~

@@ -6,7 +6,7 @@ status](https://www.r-pkg.org/badges/version/galalh)](https://cran.r-project.org
 
 `nansen` is an R package designed to facilitate access to the United
 Nations High Commissioner for Refugees (UNHCR) Refugee Data Finder. It
-provides an easy-to-use interface to the data, which covers forcibly
+provides an easy-to-use interface to the database, which covers forcibly
 displaced populations, including refugees, asylum-seekers, internally
 displaced people, stateless people, and others over a span of more than
 70 years.
@@ -37,16 +37,16 @@ The `nansen` package includes eight datasets:
 4.  `asylum_decisions`: Data on asylum decisions, including recognised,
     rejected, and otherwise closed claims.
 
-5.  `countries`: Country codes, names, UN major areas, and UNHCR
-    regional bureaux/operations.
-
-6.  `demographics`: Demographic and sub-national data, where available,
+5.  `demographics`: Demographic and sub-national data, where available,
     including age and sex disaggregation.
 
-7.  `solutions`: Data on durable solutions for refugees and IDPs.
+6.  `solutions`: Data on durable solutions for refugees and IDPs.
 
-8.  `unrwa`: Data on registered Palestine refugees under UNRWA’s
+7.  `unrwa`: Data on registered Palestine refugees under UNRWA’s
     mandate.
+
+8.  `countries`: Country codes, names, UN major areas, and UNHCR
+    regional bureaux/operations.
 
 Please check the individual dataset description for more details on the
 fields each dataset provides.
@@ -87,12 +87,14 @@ str(nansen::population)
 #>  $ oip              : num [1:120261] NA NA NA NA NA NA NA NA NA NA ...
 #>  $ hst              : num [1:120261] NA NA NA NA NA NA NA NA NA NA ...
 
-# get the total number of refugees in Chad in 2021
+# get the total number of refugees (including refugee-like) from Sudan in Chad in 2021
 nansen::population |>
-  subset(year == 2021 & coa_iso == "TCD") |>
-  aggregate(refugees ~ coa_name, sum, data =_)
-#>   coa_name refugees
-#> 1     Chad   555782
+  subset(year == 2021 & coa_iso == "TCD" & coo_iso == "SDN",
+         select = refugees)
+#> # A tibble: 1 × 1
+#>   refugees
+#>      <dbl>
+#> 1   375999
 ```
 
 ## Why `nansen`?
