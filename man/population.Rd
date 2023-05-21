@@ -7,22 +7,22 @@
 \format{
 A tibble.
 \describe{
- \item{year}{The year (e.g. 2020).}
- \item{coo_name}{Country of origin name.}
- \item{coo}{Country of origin UNHCR code.}
- \item{coo_iso}{Country of origin ISO code.}
- \item{coa_name}{Country of asylum name.}
- \item{coa}{Country of asylum UNHCR code.}
- \item{coa_iso}{Country of asylum ISO code.}
- \item{refugees}{The number of refugees.}
- \item{asylum_seekers}{The number of asyum-seekers.}
- \item{returned_refugees}{The number of returned refugees.}
- \item{idps}{The number of internally displaced persons.}
- \item{returned_idps}{The number of returned internally displaced persons.}
- \item{stateless}{The number of stateless persons.}
- \item{ooc}{The number of others of concern to UNHCR.}
- \item{oip}{The number of other people in need of international protection.}
- \item{hst}{The number of host community members.}
+\item{year}{The year (e.g. 2020).}
+\item{coo_name}{Country of origin name.}
+\item{coo}{Country of origin UNHCR code.}
+\item{coo_iso}{Country of origin ISO code.}
+\item{coa_name}{Country of asylum name.}
+\item{coa}{Country of asylum UNHCR code.}
+\item{coa_iso}{Country of asylum ISO code.}
+\item{refugees}{The number of refugees.}
+\item{asylum_seekers}{The number of asyum-seekers.}
+\item{returned_refugees}{The number of returned refugees.}
+\item{idps}{The number of internally displaced persons.}
+\item{returned_idps}{The number of returned internally displaced persons.}
+\item{stateless}{The number of stateless persons.}
+\item{ooc}{The number of others of concern to UNHCR.}
+\item{oip}{The number of other people in need of international protection.}
+\item{hst}{The number of host community members.}
 }
 }
 \source{

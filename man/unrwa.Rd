@@ -7,14 +7,14 @@
 \format{
 A tibble.
 \describe{
- \item{year}{The year (e.g. 2020).}
- \item{coo_name}{Country of origin name.}
- \item{coo}{Country of origin UNHCR code.}
- \item{coo_iso}{Country of origin ISO code.}
- \item{coa_name}{Country of asylum name.}
- \item{coa}{Country of asylum UNHCR code.}
- \item{coa_iso}{Country of asylum ISO code.}
- \item{total}{The total number of Palestine refugees registered under UNRWA’s mandate.}
+\item{year}{The year (e.g. 2020).}
+\item{coo_name}{Country of origin name.}
+\item{coo}{Country of origin UNHCR code.}
+\item{coo_iso}{Country of origin ISO code.}
+\item{coa_name}{Country of asylum name.}
+\item{coa}{Country of asylum UNHCR code.}
+\item{coa_iso}{Country of asylum ISO code.}
+\item{total}{The total number of Palestine refugees registered under UNRWA’s mandate.}
 }
 }
 \source{
