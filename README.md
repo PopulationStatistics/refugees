@@ -120,5 +120,6 @@ finding solutions for displaced populations worldwide.
 
 ## License
 
-This package is released under the [CC0
-License](https://creativecommons.org/share-your-work/public-domain/cc0/)
+This package is released under the [Creative Commons Attribution 4.0
+International Public
+License](https://creativecommons.org/licenses/by/4.0/legalcode)
