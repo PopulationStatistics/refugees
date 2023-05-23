@@ -20,7 +20,7 @@ Description: The UNHCR Refugee Population Statistics Database
     Stateless people are also included, most of who have never been displaced.
     The database also reflects the different types of solutions
     for displaced populations such as repatriation or resettlement.
-License: CC0
+License: CC BY 4.0 INT
 LazyData: true
 Depends:
     R (>= 3.5)
