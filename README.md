@@ -62,7 +62,7 @@ install.packages("nansen")
 Or retrieve the development version from Github with:
 
 ``` r
-remotes::install_github("galalH/nansen")
+remotes::install_github("PopulationStatistics/nansen")
 ```
 
 ## Usage
