@@ -1,15 +1,14 @@
 library(tidyverse)
 
 fetch_dataset <- function(dataset, ...) {
-  years <- jsonlite::fromJSON("https://api.unhcr.org/population/v1/years")$items$year
   read_json <- insistently(jsonlite::fromJSON, rate = rate_delay(60))
   results_per_page <- 10000
 
   rdf_url <- function(dataset, ...) {
     httr::modify_url("https://api.unhcr.org/",
                      path = glue::glue("/population/v1/{dataset}"),
-                     query = rlang::list2(yearFrom = min(years),
-                                          yearTo = max(years),
+                     query = rlang::list2(yearFrom = 1951,
+                                          yearTo = lubridate::year(lubridate::today()),
                                           coo_all = "true",
                                           coa_all = "true",
                                           ...))
@@ -38,10 +37,8 @@ fetch_dataset <- function(dataset, ...) {
 
 population <- fetch_dataset("population")
 demographics <- fetch_dataset("demographics",
-                              ptype_show = 1,
-                              locationDescription_show = 1,
-                              locationUR_show = 1,
-                              locationAccType_show = 1)
+                              ptype_show = 1, locationDescription_show = 1,
+                              locationUR_show = 1, locationAccType_show = 1)
 asylum_applications <- fetch_dataset("asylum-applications")
 asylum_decisions <- fetch_dataset("asylum-decisions")
 solutions <- fetch_dataset("solutions")
