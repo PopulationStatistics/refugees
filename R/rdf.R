@@ -47,6 +47,10 @@
 #'  \item{coa_name}{Country of asylum name.}
 #'  \item{coa}{Country of asylum UNHCR code.}
 #'  \item{coa_iso}{Country of asylum ISO code.}
+#'  \item{pop_type}{The three character code specifying the population type (e.g. \code{REF} for refugees, \code{ASY} for asylum-seekers etc).}
+#'  \item{location}{The textual description of the location.}
+#'  \item{loc_type}{An indication of whether the location is urban or rural. An urban location is classified as a settlement with more than 5,000 inhabitants. It can be one of the following values: \code{C} – Camp. Note that \code{C} was discontinued after 2010, at which point the accommodation type became available, \code{U} – Urban, \code{R} – Rural, \code{V} - Various/unknown}
+#'  \item{acc_type}{Accommodation Type became available in 2010 but is only populated from 2012. The code represents one of: \code{I} - Individual accommodation, \code{S} - Self-settled camp, \code{P} - Planned/managed camp, \code{C} - Collective centre, \code{R} - Reception/transit camp, \code{U} - Undefined}
 #'  \item{f_0_4}{The number of female children aged 0 to 4 inclusive.}
 #'  \item{f_5_11}{The number of female children aged 5 to 11 inclusive.}
 #'  \item{f_12_17}{The number of female children aged 12 to 17 inclusive.}

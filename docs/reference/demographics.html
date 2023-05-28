@@ -77,6 +77,18 @@ Demographics are also available for IDMC and UNRWA datasets.</p>
 <dt>coa_iso</dt>
 <dd><p>Country of asylum ISO code.</p></dd>
 
+<dt>pop_type</dt>
+<dd><p>The three character code specifying the population type (e.g. <code>REF</code> for refugees, <code>ASY</code> for asylum-seekers etc).</p></dd>
+
+<dt>location</dt>
+<dd><p>The textual description of the location.</p></dd>
+
+<dt>loc_type</dt>
+<dd><p>An indication of whether the location is urban or rural. An urban location is classified as a settlement with more than 5,000 inhabitants. It can be one of the following values: <code>C</code> – Camp. Note that <code>C</code> was discontinued after 2010, at which point the accommodation type became available, <code>U</code> – Urban, <code>R</code> – Rural, <code>V</code> - Various/unknown</p></dd>
+
+<dt>acc_type</dt>
+<dd><p>Accommodation Type became available in 2010 but is only populated from 2012. The code represents one of: <code>I</code> - Individual accommodation, <code>S</code> - Self-settled camp, <code>P</code> - Planned/managed camp, <code>C</code> - Collective centre, <code>R</code> - Reception/transit camp, <code>U</code> - Undefined</p></dd>
+
 <dt>f_0_4</dt>
 <dd><p>The number of female children aged 0 to 4 inclusive.</p></dd>
 
@@ -137,23 +149,24 @@ Demographics are also available for IDMC and UNRWA datasets.</p>
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">demographics</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 91,741 × 22</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     year coo_name      coo   coo_iso coa_name coa   coa_iso f_0_4 f_5_11 f_12_17</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span>  <span style="text-decoration: underline;">2</span>001 Afghanistan   AFG   AFG     Afghani… AFG   AFG         0      0       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span>  <span style="text-decoration: underline;">2</span>001 Iran (Islami… IRN   IRN     Afghani… AFG   AFG         0      0       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span>  <span style="text-decoration: underline;">2</span>001 Iraq          IRQ   IRQ     Afghani… AFG   AFG         0      5       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span>  <span style="text-decoration: underline;">2</span>001 Iraq          IRQ   IRQ     Albania  ALB   ALB         0      0       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span>  <span style="text-decoration: underline;">2</span>001 North Macedo… MCD   MKD     Albania  ALB   ALB         0      0       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span>  <span style="text-decoration: underline;">2</span>001 Serbia and K… SRB   SRB     Albania  ALB   ALB        14     20      18</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span>  <span style="text-decoration: underline;">2</span>001 Türkiye       TUR   TUR     Albania  ALB   ALB         0      0       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span>  <span style="text-decoration: underline;">2</span>001 Chad          CHD   TCD     Algeria  ALG   DZA         0      0       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span>  <span style="text-decoration: underline;">2</span>001 Cameroon      CMR   CMR     Algeria  ALG   DZA         0      0       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span>  <span style="text-decoration: underline;">2</span>001 Congo         COB   COG     Algeria  ALG   DZA         0      0       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 91,731 more rows</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 12 more variables: f_18_59 &lt;dbl&gt;, f_60 &lt;dbl&gt;, f_other &lt;dbl&gt;, f_total &lt;dbl&gt;,</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   m_0_4 &lt;dbl&gt;, m_5_11 &lt;dbl&gt;, m_12_17 &lt;dbl&gt;, m_18_59 &lt;dbl&gt;, m_60 &lt;dbl&gt;,</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   m_other &lt;dbl&gt;, m_total &lt;dbl&gt;, total &lt;dbl&gt;</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 193,699 × 26</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     year coo_name         coo   coo_iso coa_name coa   coa_iso pop_type location</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>            <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span>  <span style="text-decoration: underline;">2</span>001 Afghanistan      AFG   AFG     Afghani… AFG   AFG     IDP      Central </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span>  <span style="text-decoration: underline;">2</span>001 Afghanistan      AFG   AFG     Afghani… AFG   AFG     IDP      Dispers…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span>  <span style="text-decoration: underline;">2</span>001 Afghanistan      AFG   AFG     Afghani… AFG   AFG     IDP      North   </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span>  <span style="text-decoration: underline;">2</span>001 Afghanistan      AFG   AFG     Afghani… AFG   AFG     IDP      West    </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span>  <span style="text-decoration: underline;">2</span>001 Afghanistan      AFG   AFG     Afghani… AFG   AFG     RET      Dispers…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span>  <span style="text-decoration: underline;">2</span>001 Iran (Islamic R… IRN   IRN     Afghani… AFG   AFG     REF      Kabul   </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span>  <span style="text-decoration: underline;">2</span>001 Iraq             IRQ   IRQ     Afghani… AFG   AFG     REF      Kabul   </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span>  <span style="text-decoration: underline;">2</span>001 Iraq             IRQ   IRQ     Albania  ALB   ALB     REF      Tirana  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span>  <span style="text-decoration: underline;">2</span>001 North Macedonia  MCD   MKD     Albania  ALB   ALB     ASY      Tirana  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span>  <span style="text-decoration: underline;">2</span>001 North Macedonia  MCD   MKD     Albania  ALB   ALB     REF      Tirana  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 193,689 more rows</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 17 more variables: loc_type &lt;chr&gt;, acc_type &lt;chr&gt;, f_0_4 &lt;dbl&gt;,</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   f_5_11 &lt;dbl&gt;, f_12_17 &lt;dbl&gt;, f_18_59 &lt;dbl&gt;, f_60 &lt;dbl&gt;, f_other &lt;dbl&gt;,</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   f_total &lt;dbl&gt;, m_0_4 &lt;dbl&gt;, m_5_11 &lt;dbl&gt;, m_12_17 &lt;dbl&gt;, m_18_59 &lt;dbl&gt;,</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   m_60 &lt;dbl&gt;, m_other &lt;dbl&gt;, m_total &lt;dbl&gt;, total &lt;dbl&gt;</span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
