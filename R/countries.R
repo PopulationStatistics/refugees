@@ -13,5 +13,7 @@
 #'  \item{unsd_imregion}{SDG Region name.}
 #'  \item{sdg_region}{SDG Region name.}
 #' }
-#' @source Table 22 annexed to the Global Trends 2020 report.
+#' @source \href{https://www.unhcr.org/refugee-statistics/}{UNHCR Refugee Data Finder}.
+#' @examples
+#' countries
 "countries"

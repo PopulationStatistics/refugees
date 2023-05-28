@@ -18,12 +18,15 @@ A tibble.
 }
 }
 \source{
-Table 22 annexed to the Global Trends 2020 report.
+\href{https://www.unhcr.org/refugee-statistics/}{UNHCR Refugee Data Finder}.
 }
 \usage{
 countries
 }
 \description{
 Country codes, names, UN major areas and UNHCR regional bureaux/operations.
+}
+\examples{
+countries
 }
 \keyword{datasets}
