@@ -1,3 +1,3 @@
-# nansen 2022.06.0
+# nansen 2022.12.0
 
-* Initial release. Data from UNHCR's Mid-Year Trends 2022 report.
+* Initial release. Data from UNHCR's Global Trends 2022 report.
