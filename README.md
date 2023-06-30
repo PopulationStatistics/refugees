@@ -1,10 +1,10 @@
 
-# nansen
+# displaced
 
 [![CRAN
 status](https://www.r-pkg.org/badges/version/galalh)](https://cran.r-project.org/package=galalh)
 
-`nansen` is an R package designed to facilitate access to the United
+`displaced` is an R package designed to facilitate access to the United
 Nations High Commissioner for Refugees (UNHCR) Refugee Data Finder. It
 provides an easy-to-use interface to the database, which covers forcibly
 displaced populations, including refugees, asylum-seekers, internally
@@ -22,7 +22,7 @@ This package provides data from three major sources:
 
 ## Datasets
 
-The `nansen` package includes eight datasets:
+The `displaced` package includes eight datasets:
 
 1.  `population`: Data on forcibly displaced and stateless persons by
     year, including refugees, asylum-seekers, returned refugees,
@@ -56,23 +56,23 @@ fields each dataset provides.
 Install either from CRAN with:
 
 ``` r
-install.packages("nansen")
+install.packages("displaced")
 ```
 
 Or retrieve the development version from Github with:
 
 ``` r
-remotes::install_github("PopulationStatistics/nansen")
+remotes::install_github("PopulationStatistics/displaced")
 ```
 
 ## Usage
 
-Here are some examples of how you can use the `nansen` package.
+Here are some examples of how you can use the `displaced` package.
 
 ``` r
 # Load the package
-library(nansen)
-str(nansen::population)
+library(displaced)
+str(displaced::population)
 #> tibble [120,338 × 16] (S3: tbl_df/tbl/data.frame)
 #>  $ year             : num [1:120338] 1951 1951 1951 1951 1951 ...
 #>  $ coo_name         : chr [1:120338] "Unknown" "Unknown" "Unknown" "Unknown" ...
@@ -92,7 +92,7 @@ str(nansen::population)
 #>  $ hst              : num [1:120338] NA NA NA NA NA NA NA NA NA NA ...
 
 # get the total number of refugees (including refugee-like) from Sudan in Chad in 2021
-nansen::population |>
+displaced::population |>
   subset(year == 2021 & coa_iso == "TCD" & coo_iso == "SDN",
          select = refugees)
 #> # A tibble: 1 × 1
@@ -100,23 +100,6 @@ nansen::population |>
 #>      <dbl>
 #> 1   375999
 ```
-
-## Why `nansen`?
-
-The package is named as homage to [Fridtjof Wedel-Jarlsberg
-Nansen](https://en.wikipedia.org/wiki/Fridtjof_Nansen), a Norwegian
-explorer, scientist, diplomat, and humanitarian who significantly
-contributed to assisting displaced persons following World War I.
-Serving as the League of Nations High Commissioner for Refugees, Nansen
-developed the “Nansen Passport”, a critical tool that allowed stateless
-persons to cross borders legally. His groundbreaking work earned him the
-Nobel Peace Prize in 1922 and laid the foundation for modern refugee
-law.
-
-By naming this package `nansen`, we pay tribute to his lasting legacy in
-service of forcibly displaced people worldwide. Our hope is that this
-package aids in continuing this legacy of understanding, assisting, and
-finding solutions for displaced populations worldwide.
 
 ## License
 
