@@ -3,7 +3,8 @@ test_that("countries dataset has more than 0 row", {
 })
 
 test_that("countries dataset has the correct column names", {
-  cn <- c("iso_code", "unhcr_code", "name", "unhcr_region", "unsd_region", "unsd_subregion", "unsd_imregion", "sdg_region")
+  cn <- c("iso_code", "unhcr_code", "name", "unhcr_region",
+          "unsd_region", "unsd_subregion", "unsd_imregion")
   expect_equal(cn, names(countries))
 })
 
@@ -15,5 +16,4 @@ test_that("countries dataset columns have the right type", {
   expect_type(countries[["unsd_region"]], "character")
   expect_type(countries[["unsd_subregion"]], "character")
   expect_type(countries[["unsd_imregion"]], "character")
-  expect_type(countries[["sdg_region"]], "character")
 })

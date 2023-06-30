@@ -2,7 +2,7 @@
 # displaced
 
 [![CRAN
-status](https://www.r-pkg.org/badges/version/galalh)](https://cran.r-project.org/package=galalh)
+status](https://www.r-pkg.org/badges/version/displaced)](https://cran.r-project.org/package=displaced)
 
 `displaced` is an R package designed to facilitate access to the United
 Nations High Commissioner for Refugees (UNHCR) Refugee Data Finder. It
@@ -59,50 +59,98 @@ Install either from CRAN with:
 install.packages("displaced")
 ```
 
-Or retrieve the development version from Github with:
+Or retrieve the development version from Github using the
+[`pak`](https://pak.r-lib.org/) package:
 
 ``` r
-remotes::install_github("PopulationStatistics/displaced")
+pak::pkg_install("PopulationStatistics/displaced")
 ```
 
 ## Usage
 
-Here are some examples of how you can use the `displaced` package.
+Here are some examples of how you can use the `displaced` package. The
+`population` dataset can be used to easily get data on forced
+displacement or statelessness.
 
 ``` r
-# Load the package
 library(displaced)
-str(displaced::population)
-#> tibble [120,338 × 16] (S3: tbl_df/tbl/data.frame)
-#>  $ year             : num [1:120338] 1951 1951 1951 1951 1951 ...
-#>  $ coo_name         : chr [1:120338] "Unknown" "Unknown" "Unknown" "Unknown" ...
-#>  $ coo              : chr [1:120338] "UKN" "UKN" "UKN" "UKN" ...
-#>  $ coo_iso          : chr [1:120338] NA NA NA NA ...
-#>  $ coa_name         : chr [1:120338] "Australia" "Austria" "Belgium" "Canada" ...
-#>  $ coa              : chr [1:120338] "AUL" "AUS" "BEL" "CAN" ...
-#>  $ coa_iso          : chr [1:120338] "AUS" "AUT" "BEL" "CAN" ...
-#>  $ refugees         : num [1:120338] 180000 282000 55000 168511 2000 ...
-#>  $ asylum_seekers   : num [1:120338] 0 0 0 0 0 0 0 0 0 0 ...
-#>  $ returned_refugees: num [1:120338] 0 0 0 0 0 0 0 0 0 0 ...
-#>  $ idps             : num [1:120338] 0 0 0 0 0 0 0 0 0 0 ...
-#>  $ returned_idps    : num [1:120338] 0 0 0 0 0 0 0 0 0 0 ...
-#>  $ stateless        : num [1:120338] 0 0 0 0 0 0 0 0 0 0 ...
-#>  $ ooc              : num [1:120338] 0 0 0 0 0 0 0 0 0 0 ...
-#>  $ oip              : num [1:120338] NA NA NA NA NA NA NA NA NA NA ...
-#>  $ hst              : num [1:120338] NA NA NA NA NA NA NA NA NA NA ...
-
-# get the total number of refugees (including refugee-like) from Sudan in Chad in 2021
-displaced::population |>
-  subset(year == 2021 & coa_iso == "TCD" & coo_iso == "SDN",
-         select = refugees)
-#> # A tibble: 1 × 1
-#>   refugees
-#>      <dbl>
-#> 1   375999
+glimpse(displaced::population)
+#> Rows: 120,338
+#> Columns: 16
+#> $ year              <dbl> 1951, 1951, 1951, 1951, 1951, 1951, 1951, 1951, 1951, 1951, 1951, 1951…
+#> $ coo_name          <chr> "Unknown", "Unknown", "Unknown", "Unknown", "Unknown", "Unknown", "Unk…
+#> $ coo               <chr> "UKN", "UKN", "UKN", "UKN", "UKN", "UKN", "UKN", "UKN", "UKN", "UKN", …
+#> $ coo_iso           <chr> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA…
+#> $ coa_name          <chr> "Australia", "Austria", "Belgium", "Canada", "Denmark", "France", "Uni…
+#> $ coa               <chr> "AUL", "AUS", "BEL", "CAN", "DEN", "FRA", "GBR", "GFR", "GRE", "HKG", …
+#> $ coa_iso           <chr> "AUS", "AUT", "BEL", "CAN", "DNK", "FRA", "GBR", "DEU", "GRC", "HKG", …
+#> $ refugees          <dbl> 180000, 282000, 55000, 168511, 2000, 290000, 208000, 265000, 18000, 30…
+#> $ asylum_seekers    <dbl> 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0…
+#> $ returned_refugees <dbl> 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0…
+#> $ idps              <dbl> 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0…
+#> $ returned_idps     <dbl> 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0…
+#> $ stateless         <dbl> 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0…
+#> $ ooc               <dbl> 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0…
+#> $ oip               <dbl> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA…
+#> $ hst               <dbl> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA…
 ```
+
+The `population` dataset can be used to get the 10 countries of origin
+with highest number of refugees, people in refugee-like situations
+including people in need of internation protection in 2022.
+
+``` r
+library(dplyr)
+ref_coo_10 <- displaced::population |>
+  filter(year == 2022) |>
+  summarise(refugees = sum(refugees, na.rm = TRUE) + sum(oip, na.rm = TRUE),
+            .by = coo_name) |>
+  slice_max(order_by = refugees, n = 10)
+ref_coo_10
+#> # A tibble: 10 × 2
+#>    coo_name                           refugees
+#>    <chr>                                 <dbl>
+#>  1 Syrian Arab Rep.                    6547818
+#>  2 Ukraine                             5679880
+#>  3 Afghanistan                         5661675
+#>  4 Venezuela (Bolivarian Republic of)  5451832
+#>  5 South Sudan                         2294983
+#>  6 Myanmar                             1253111
+#>  7 Dem. Rep. of the Congo               931903
+#>  8 Sudan                                836756
+#>  9 Somalia                              790513
+#> 10 Central African Rep.                 748327
+```
+
+We can use `ggplot2` and the
+[`unhcrthemes`](https://github.com/vidonne/unhcrthemes) to visualize our
+data while following the [UNHCR data visualization
+guidelines](https://dataviz.unhcr.org/general_guidance/).
+
+``` r
+library(ggplot2)
+library(unhcrthemes)
+
+lbl <- scales::label_number()
+
+ref_coo_10 |>
+  ggplot(aes(refugees, reorder(coo_name, refugees))) +
+  geom_col(fill = unhcr_pal(n = 1, "pal_blue"),
+           width = 0.8) +
+  geom_text(aes(label = lbl(refugees)),
+            hjust = -0.2) +
+  scale_x_continuous(expand = expansion(mult = c(0, 0.1))) +
+  theme_unhcr(font_size = 12,
+              grid = FALSE,
+              axis = FALSE,
+              axis_title = FALSE,
+              axis_text = "y")
+```
+
+<img src="man/figures/README-unnamed-chunk-6-1.png" width="100%" />
 
 ## License
 
-This package is released under the [Creative Commons Attribution 4.0
-International Public
-License](https://creativecommons.org/licenses/by/4.0/legalcode)
+This package is released under the [Creative Commons Attribution for
+Intergovernmental
+Organisations](https://creativecommons.org/licenses/by/3.0/igo/)
