@@ -8,7 +8,7 @@ fetch_dataset <- function(dataset, ...) {
     httr::modify_url("https://api.unhcr.org/",
                      path = glue::glue("/population/v1/{dataset}"),
                      query = rlang::list2(yearFrom = 1951,
-                                          yearTo = lubridate::year(lubridate::today()),
+                                          yearTo = year(today()),
                                           coo_all = "true",
                                           coa_all = "true",
                                           ...))
