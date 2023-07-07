@@ -1,4 +1,4 @@
 library(testthat)
-library(displaced)
+library(refugees)
 
-test_check("displaced")
+test_check("refugees")

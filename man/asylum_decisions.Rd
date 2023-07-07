@@ -40,7 +40,7 @@ asylum_decisions
 \description{
 Decisions taken on asylum claims by year and countries of asylum and origin.
 Asylum claims are applications for international protection and
-decisions on asylum claimscan be positive, negative or otherwise closed.
+decisions on asylum claims can be positive, negative or otherwise closed.
 }
 \details{
 See the notes on the data structure in the

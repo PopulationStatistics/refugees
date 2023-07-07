@@ -15,7 +15,7 @@
 #'  \item{coa}{Country of asylum UNHCR code.}
 #'  \item{coa_iso}{Country of asylum ISO code.}
 #'  \item{refugees}{The number of refugees.}
-#'  \item{asylum_seekers}{The number of asyum-seekers.}
+#'  \item{asylum_seekers}{The number of asylum-seekers.}
 #'  \item{returned_refugees}{The number of returned refugees.}
 #'  \item{idps}{The number of internally displaced persons.}
 #'  \item{returned_idps}{The number of returned internally displaced persons.}
@@ -111,7 +111,7 @@
 #'
 #' Decisions taken on asylum claims by year and countries of asylum and origin.
 #' Asylum claims are applications for international protection and
-#' decisions on asylum claimscan be positive, negative or otherwise closed.
+#' decisions on asylum claims can be positive, negative or otherwise closed.
 #'
 #' See the notes on the data structure in the
 #' \href{https://www.unhcr.org/refugee-statistics/methodology/}{methodology pages} for more details.

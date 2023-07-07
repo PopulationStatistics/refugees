@@ -15,7 +15,7 @@ A tibble.
 \item{coa}{Country of asylum UNHCR code.}
 \item{coa_iso}{Country of asylum ISO code.}
 \item{refugees}{The number of refugees.}
-\item{asylum_seekers}{The number of asyum-seekers.}
+\item{asylum_seekers}{The number of asylum-seekers.}
 \item{returned_refugees}{The number of returned refugees.}
 \item{idps}{The number of internally displaced persons.}
 \item{returned_idps}{The number of returned internally displaced persons.}
