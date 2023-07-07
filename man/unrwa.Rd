@@ -31,6 +31,6 @@ See the notes on the data structure in the
 \href{https://www.unhcr.org/refugee-statistics/methodology/}{methodology pages} for more details.
 }
 \examples{
-solutions
+unrwa
 }
 \keyword{datasets}

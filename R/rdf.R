@@ -193,7 +193,7 @@
 #' }
 #' @source \href{https://www.unhcr.org/refugee-statistics/}{UNHCR Refugee Data Finder}.
 #' @examples
-#' solutions
+#' idmc
 "idmc"
 
 #' UNRWA data
@@ -216,5 +216,5 @@
 #' }
 #' @source \href{https://www.unhcr.org/refugee-statistics/}{UNHCR Refugee Data Finder}.
 #' @examples
-#' solutions
+#' unrwa
 "unrwa"
