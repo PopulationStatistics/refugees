@@ -11,3 +11,4 @@
 ^\.lintr$
 ^revdep$
 ^docs$
+^CRAN-SUBMISSION$
