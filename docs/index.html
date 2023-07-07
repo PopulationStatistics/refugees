@@ -13,7 +13,7 @@
     Stateless people are also included, most of who have never been displaced.
     The database also reflects the different types of solutions
     for displaced populations such as repatriation or resettlement.">
-<title>UNHCR Refugee Population Statistics Database • nansen</title>
+<title>UNHCR Refugee Population Statistics Database • refugees</title>
 <script src="deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="deps/bootstrap-5.2.2/bootstrap.min.css" rel="stylesheet">
 <script src="deps/bootstrap-5.2.2/bootstrap.bundle.min.js"></script><link href="deps/Lato-0.4.5/font.css" rel="stylesheet">
@@ -40,7 +40,7 @@
 
     <nav class="navbar fixed-top navbar-light navbar-expand-lg bg-light"><div class="container">
     
-    <a class="navbar-brand me-2" href="index.html">nansen</a>
+    <a class="navbar-brand me-2" href="index.html">refugees</a>
 
     <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2022.12.0</small>
 
@@ -70,20 +70,20 @@
 </nav><div class="container template-home">
 <div class="row">
   <main id="main" class="col-md-9"><div class="section level1">
-<div class="page-header"><h1 id="nansen">nansen<a class="anchor" aria-label="anchor" href="#nansen"></a>
+<div class="page-header"><h1 id="refugees">refugees<a class="anchor" aria-label="anchor" href="#refugees"></a>
 </h1></div>
-<p><a href="https://cran.r-project.org/package=galalh" class="external-link"><img src="https://www.r-pkg.org/badges/version/galalh" alt="CRAN status"></a></p>
-<p><code>nansen</code> is an R package designed to facilitate access to the United Nations High Commissioner for Refugees (UNHCR) Refugee Data Finder. It provides an easy-to-use interface to the database, which covers forcibly displaced populations, including refugees, asylum-seekers, internally displaced people, stateless people, and others over a span of more than 70 years.</p>
+<p><a href="https://cran.r-project.org/package=refugees" class="external-link"><img src="https://www.r-pkg.org/badges/version/refugees" alt="CRAN status"></a></p>
+<p><code>refugees</code> is an R package designed to facilitate access to the United Nations High Commissioner for Refugees (UNHCR) Refugee Data Finder. It provides an easy-to-use interface to the database, which covers forcibly displaced populations, including refugees, asylum-seekers, internally displaced people, stateless people, and others over a span of more than 70 years.</p>
 <p>This package provides data from three major sources:</p>
 <ol style="list-style-type: decimal">
-<li>Data from UNHCR’s annual statistical activities dating back to 1951.</li>
-<li>Data from the United Nations Relief and Works Agency for Palestine Refugees in the Near East (UNRWA), specifically for registered Palestine refugees under UNRWA’s mandate.</li>
-<li>Data from the Internal Displacement Monitoring Centre (IDMC) on people displaced within their country due to conflict or violence.</li>
+<li><p>Data from UNHCR’s annual statistical activities dating back to 1951.</p></li>
+<li><p>Data from the United Nations Relief and Works Agency for Palestine Refugees in the Near East (UNRWA), specifically for registered Palestine refugees under UNRWA’s mandate.</p></li>
+<li><p>Data from the Internal Displacement Monitoring Centre (IDMC) on people displaced within their country due to conflict or violence.</p></li>
 </ol>
 <div class="section level2">
 <h2 id="datasets">Datasets<a class="anchor" aria-label="anchor" href="#datasets"></a>
 </h2>
-<p>The <code>nansen</code> package includes eight datasets:</p>
+<p>The <code>refugees</code> package includes eight datasets:</p>
 <ol style="list-style-type: decimal">
 <li><p><code>population</code>: Data on forcibly displaced and stateless persons by year, including refugees, asylum-seekers, returned refugees, internally displaced persons (IDPs), and stateless persons.</p></li>
 <li><p><code>idmc</code>: Data from the Internal Displacement Monitoring Centre on the total number of IDPs due to conflict and violence.</p></li>
@@ -92,72 +92,100 @@
 <li><p><code>demographics</code>: Demographic and sub-national data, where available, including age and sex disaggregation.</p></li>
 <li><p><code>solutions</code>: Data on durable solutions for refugees and IDPs.</p></li>
 <li><p><code>unrwa</code>: Data on registered Palestine refugees under UNRWA’s mandate.</p></li>
-<li><p><code>countries</code>: Country codes, names, UN major areas, and UNHCR regional bureaux/operations.</p></li>
+<li><p><code>flows</code>: Numbers of the people forced to flee during each of the years since 1962.</p></li>
 </ol>
-<p>Please check the individual dataset description for more details on the fields each dataset provides.</p>
+<p>Please check the individual dataset description for more details on the content of each dataset.</p>
 </div>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
 <p>Install either from CRAN with:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"nansen"</span><span class="op">)</span></span></code></pre></div>
-<p>Or retrieve the development version from Github with:</p>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"refugees"</span><span class="op">)</span></span></code></pre></div>
+<p>Or retrieve the development version from Github using the <a href="https://pak.r-lib.org/" class="external-link"><code>pak</code></a> package:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"PopulationStatistics/nansen"</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu">pak</span><span class="fu">::</span><span class="fu">pkg_install</span><span class="op">(</span><span class="st">"PopulationStatistics/refugees"</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="usage">Usage<a class="anchor" aria-label="anchor" href="#usage"></a>
 </h2>
-<p>Here are some examples of how you can use the <code>nansen</code> package.</p>
+<p>Here are some examples of how you can use the <code>refugees`` package. The</code>population` dataset can be used to easily get data on forced displacement or statelessness.</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># Load the package</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">nansen</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/utils/str.html" class="external-link">str</a></span><span class="op">(</span><span class="fu">nansen</span><span class="fu">::</span><span class="va"><a href="reference/population.html">population</a></span><span class="op">)</span></span>
-<span><span class="co">#&gt; tibble [120,338 × 16] (S3: tbl_df/tbl/data.frame)</span></span>
-<span><span class="co">#&gt;  $ year             : num [1:120338] 1951 1951 1951 1951 1951 ...</span></span>
-<span><span class="co">#&gt;  $ coo_name         : chr [1:120338] "Unknown" "Unknown" "Unknown" "Unknown" ...</span></span>
-<span><span class="co">#&gt;  $ coo              : chr [1:120338] "UKN" "UKN" "UKN" "UKN" ...</span></span>
-<span><span class="co">#&gt;  $ coo_iso          : chr [1:120338] NA NA NA NA ...</span></span>
-<span><span class="co">#&gt;  $ coa_name         : chr [1:120338] "Australia" "Austria" "Belgium" "Canada" ...</span></span>
-<span><span class="co">#&gt;  $ coa              : chr [1:120338] "AUL" "AUS" "BEL" "CAN" ...</span></span>
-<span><span class="co">#&gt;  $ coa_iso          : chr [1:120338] "AUS" "AUT" "BEL" "CAN" ...</span></span>
-<span><span class="co">#&gt;  $ refugees         : num [1:120338] 180000 282000 55000 168511 2000 ...</span></span>
-<span><span class="co">#&gt;  $ asylum_seekers   : num [1:120338] 0 0 0 0 0 0 0 0 0 0 ...</span></span>
-<span><span class="co">#&gt;  $ returned_refugees: num [1:120338] 0 0 0 0 0 0 0 0 0 0 ...</span></span>
-<span><span class="co">#&gt;  $ idps             : num [1:120338] 0 0 0 0 0 0 0 0 0 0 ...</span></span>
-<span><span class="co">#&gt;  $ returned_idps    : num [1:120338] 0 0 0 0 0 0 0 0 0 0 ...</span></span>
-<span><span class="co">#&gt;  $ stateless        : num [1:120338] 0 0 0 0 0 0 0 0 0 0 ...</span></span>
-<span><span class="co">#&gt;  $ ooc              : num [1:120338] 0 0 0 0 0 0 0 0 0 0 ...</span></span>
-<span><span class="co">#&gt;  $ oip              : num [1:120338] NA NA NA NA NA NA NA NA NA NA ...</span></span>
-<span><span class="co">#&gt;  $ hst              : num [1:120338] NA NA NA NA NA NA NA NA NA NA ...</span></span>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">refugees</span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org" class="external-link">dplyr</a></span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html" class="external-link">glimpse</a></span><span class="op">(</span><span class="fu">refugees</span><span class="fu">::</span><span class="va"><a href="reference/population.html">population</a></span><span class="op">)</span></span>
+<span><span class="co">#&gt; Rows: 120,338</span></span>
+<span><span class="co">#&gt; Columns: 16</span></span>
+<span><span class="co">#&gt; $ year              &lt;dbl&gt; 1951, 1951, 1951, 1951, 1951, 1951, 1951, 1951, 1951…</span></span>
+<span><span class="co">#&gt; $ coo_name          &lt;chr&gt; "Unknown", "Unknown", "Unknown", "Unknown", "Unknown…</span></span>
+<span><span class="co">#&gt; $ coo               &lt;chr&gt; "UKN", "UKN", "UKN", "UKN", "UKN", "UKN", "UKN", "UK…</span></span>
+<span><span class="co">#&gt; $ coo_iso           &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …</span></span>
+<span><span class="co">#&gt; $ coa_name          &lt;chr&gt; "Australia", "Austria", "Belgium", "Canada", "Denmar…</span></span>
+<span><span class="co">#&gt; $ coa               &lt;chr&gt; "AUL", "AUS", "BEL", "CAN", "DEN", "FRA", "GBR", "GF…</span></span>
+<span><span class="co">#&gt; $ coa_iso           &lt;chr&gt; "AUS", "AUT", "BEL", "CAN", "DNK", "FRA", "GBR", "DE…</span></span>
+<span><span class="co">#&gt; $ refugees          &lt;dbl&gt; 180000, 282000, 55000, 168511, 2000, 290000, 208000,…</span></span>
+<span><span class="co">#&gt; $ asylum_seekers    &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0…</span></span>
+<span><span class="co">#&gt; $ returned_refugees &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0…</span></span>
+<span><span class="co">#&gt; $ idps              &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0…</span></span>
+<span><span class="co">#&gt; $ returned_idps     &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0…</span></span>
+<span><span class="co">#&gt; $ stateless         &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0…</span></span>
+<span><span class="co">#&gt; $ ooc               &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0…</span></span>
+<span><span class="co">#&gt; $ oip               &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …</span></span>
+<span><span class="co">#&gt; $ hst               &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …</span></span></code></pre></div>
+<p>The <code>population</code> dataset can be used to get the 10 countries of origin with highest number of refugees, people in refugee-like situations including people in need of international protection in 2022.</p>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">ref_coo_10</span> <span class="op">&lt;-</span> <span class="fu">refugees</span><span class="fu">::</span><span class="va"><a href="reference/population.html">population</a></span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">year</span> <span class="op">==</span> <span class="fl">2022</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html" class="external-link">summarise</a></span><span class="op">(</span>refugees <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html" class="external-link">sum</a></span><span class="op">(</span><span class="va">refugees</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html" class="external-link">sum</a></span><span class="op">(</span><span class="va">oip</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>,</span>
+<span>            .by <span class="op">=</span> <span class="va">coo_name</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/slice.html" class="external-link">slice_max</a></span><span class="op">(</span>order_by <span class="op">=</span> <span class="va">refugees</span>, n <span class="op">=</span> <span class="fl">10</span><span class="op">)</span></span>
+<span><span class="va">ref_coo_10</span></span>
+<span><span class="co">#&gt; # A tibble: 10 × 2</span></span>
+<span><span class="co">#&gt;    coo_name                           refugees</span></span>
+<span><span class="co">#&gt;    &lt;chr&gt;                                 &lt;dbl&gt;</span></span>
+<span><span class="co">#&gt;  1 Syrian Arab Rep.                    6547818</span></span>
+<span><span class="co">#&gt;  2 Ukraine                             5679880</span></span>
+<span><span class="co">#&gt;  3 Afghanistan                         5661675</span></span>
+<span><span class="co">#&gt;  4 Venezuela (Bolivarian Republic of)  5451832</span></span>
+<span><span class="co">#&gt;  5 South Sudan                         2294983</span></span>
+<span><span class="co">#&gt;  6 Myanmar                             1253111</span></span>
+<span><span class="co">#&gt;  7 Dem. Rep. of the Congo               931903</span></span>
+<span><span class="co">#&gt;  8 Sudan                                836756</span></span>
+<span><span class="co">#&gt;  9 Somalia                              790513</span></span>
+<span><span class="co">#&gt; 10 Central African Rep.                 748327</span></span></code></pre></div>
+<p>We can use <code>ggplot2</code> and the <a href="https://github.com/vidonne/unhcrthemes" class="external-link"><code>unhcrthemes</code></a> to visualize our data following the <a href="https://dataviz.unhcr.org/general_guidance/" class="external-link">UNHCR data visualization guidelines</a>.</p>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/vidonne/unhcrthemes" class="external-link">unhcrthemes</a></span><span class="op">)</span></span>
 <span></span>
-<span><span class="co"># get the total number of refugees (including refugee-like) from Sudan in Chad in 2021</span></span>
-<span><span class="fu">nansen</span><span class="fu">::</span><span class="va"><a href="reference/population.html">population</a></span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://rdrr.io/r/base/subset.html" class="external-link">subset</a></span><span class="op">(</span><span class="va">year</span> <span class="op">==</span> <span class="fl">2021</span> <span class="op">&amp;</span> <span class="va">coa_iso</span> <span class="op">==</span> <span class="st">"TCD"</span> <span class="op">&amp;</span> <span class="va">coo_iso</span> <span class="op">==</span> <span class="st">"SDN"</span>,</span>
-<span>         select <span class="op">=</span> <span class="va">refugees</span><span class="op">)</span></span>
-<span><span class="co">#&gt; # A tibble: 1 × 1</span></span>
-<span><span class="co">#&gt;   refugees</span></span>
-<span><span class="co">#&gt;      &lt;dbl&gt;</span></span>
-<span><span class="co">#&gt; 1   375999</span></span></code></pre></div>
-</div>
-<div class="section level2">
-<h2 id="why-nansen">Why <code>nansen</code>?<a class="anchor" aria-label="anchor" href="#why-nansen"></a>
-</h2>
-<p>The package is named as homage to <a href="https://en.wikipedia.org/wiki/Fridtjof_Nansen" class="external-link">Fridtjof Wedel-Jarlsberg Nansen</a>, a Norwegian explorer, scientist, diplomat, and humanitarian who significantly contributed to assisting displaced persons following World War I. Serving as the League of Nations High Commissioner for Refugees, Nansen developed the “Nansen Passport”, a critical tool that allowed stateless persons to cross borders legally. His groundbreaking work earned him the Nobel Peace Prize in 1922 and laid the foundation for modern refugee law.</p>
-<p>By naming this package <code>nansen</code>, we pay tribute to his lasting legacy in service of forcibly displaced people worldwide. Our hope is that this package aids in continuing this legacy of understanding, assisting, and finding solutions for displaced populations worldwide.</p>
+<span><span class="va">ref_coo_10</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span><span class="va">refugees</span>, <span class="fu"><a href="https://rdrr.io/r/stats/reorder.factor.html" class="external-link">reorder</a></span><span class="op">(</span><span class="va">coo_name</span>, <span class="va">refugees</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html" class="external-link">geom_col</a></span><span class="op">(</span>fill <span class="op">=</span> <span class="fu"><a href="https://vidonne.github.io/unhcrthemes/reference/unhcr_pal.html" class="external-link">unhcr_pal</a></span><span class="op">(</span>n <span class="op">=</span> <span class="fl">1</span>, <span class="st">"pal_blue"</span><span class="op">)</span>,</span>
+<span>           width <span class="op">=</span> <span class="fl">0.8</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_text.html" class="external-link">geom_text</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>label <span class="op">=</span> <span class="fu">scales</span><span class="fu">::</span><span class="fu"><a href="https://scales.r-lib.org/reference/label_number.html" class="external-link">label_comma</a></span><span class="op">(</span><span class="op">)</span><span class="op">(</span><span class="va">refugees</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>            hjust <span class="op">=</span> <span class="op">-</span><span class="fl">0.2</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html" class="external-link">scale_x_continuous</a></span><span class="op">(</span>expand <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/expansion.html" class="external-link">expansion</a></span><span class="op">(</span>mult <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">0.1</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Refugees, people in refugee-like situations and other people in need of international protection"</span>,</span>
+<span>       subtitle <span class="op">=</span> <span class="st">"By country of origin | end-2022"</span>,</span>
+<span>       caption <span class="op">=</span> <span class="st">"Source: UNHCR Refugee Data Finder"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://vidonne.github.io/unhcrthemes/reference/theme_unhcr.html" class="external-link">theme_unhcr</a></span><span class="op">(</span>font_size <span class="op">=</span> <span class="fl">12</span>,</span>
+<span>              grid <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>              axis <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>              axis_title <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>              axis_text <span class="op">=</span> <span class="st">"y"</span><span class="op">)</span></span></code></pre></div>
+<p><img src="reference/figures/README-unnamed-chunk-6-1.png" width="100%"></p>
 </div>
 <div class="section level2">
 <h2 id="license">License<a class="anchor" aria-label="anchor" href="#license"></a>
 </h2>
-<p>This package is released under the <a href="https://creativecommons.org/licenses/by/4.0/legalcode" class="external-link">Creative Commons Attribution 4.0 International Public License</a></p>
+<p>This package is released under the <a href="https://creativecommons.org/licenses/by/4.0/" class="external-link">Creative Commons Attribution 4.0 International Public License</a>.</p>
 </div>
 </div>
   </main><aside class="col-md-3"><div class="license">
 <h2 data-toc-skip>License</h2>
 <ul class="list-unstyled">
 <li><a href="LICENSE.html">Full license</a></li>
-<li><small><a href="https://creativecommons.org/licenses/by/4.0" class="external-link">CC BY 4.0</a> INT</small></li>
+<li><small><a href="https://creativecommons.org/licenses/by/4.0" class="external-link">CC BY 4.0</a></small></li>
 </ul>
 </div>
 
@@ -171,7 +199,7 @@
 <div class="citation">
 <h2 data-toc-skip>Citation</h2>
 <ul class="list-unstyled">
-<li><a href="authors.html#citation">Citing nansen</a></li>
+<li><a href="authors.html#citation">Citing refugees</a></li>
 </ul>
 </div>
 

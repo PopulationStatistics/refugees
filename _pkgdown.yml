@@ -1,4 +1,4 @@
-url: https://galalh.github.io/nansen/
+url: https://github.com/PopulationStatistics/refugees
 template:
   package: unhcrtemplate
   bootstrap: 5
@@ -13,6 +13,7 @@ reference:
   - solutions
   - idmc
   - unrwa
+  - flows
 - title: "Misc"
   contents:
   - countries

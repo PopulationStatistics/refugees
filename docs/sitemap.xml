@@ -1,51 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://galalh.github.io/nansen/404.html</loc>
+    <loc>https://github.com/PopulationStatistics/refugees/404.html</loc>
   </url>
   <url>
-    <loc>https://galalh.github.io/nansen/authors.html</loc>
+    <loc>https://github.com/PopulationStatistics/refugees/authors.html</loc>
   </url>
   <url>
-    <loc>https://galalh.github.io/nansen/CODE_OF_CONDUCT.html</loc>
+    <loc>https://github.com/PopulationStatistics/refugees/CODE_OF_CONDUCT.html</loc>
   </url>
   <url>
-    <loc>https://galalh.github.io/nansen/index.html</loc>
+    <loc>https://github.com/PopulationStatistics/refugees/index.html</loc>
   </url>
   <url>
-    <loc>https://galalh.github.io/nansen/LICENSE.html</loc>
+    <loc>https://github.com/PopulationStatistics/refugees/LICENSE.html</loc>
   </url>
   <url>
-    <loc>https://galalh.github.io/nansen/news/index.html</loc>
+    <loc>https://github.com/PopulationStatistics/refugees/news/index.html</loc>
   </url>
   <url>
-    <loc>https://galalh.github.io/nansen/reference/asylum_applications.html</loc>
+    <loc>https://github.com/PopulationStatistics/refugees/reference/asylum_applications.html</loc>
   </url>
   <url>
-    <loc>https://galalh.github.io/nansen/reference/asylum_decisions.html</loc>
+    <loc>https://github.com/PopulationStatistics/refugees/reference/asylum_decisions.html</loc>
   </url>
   <url>
-    <loc>https://galalh.github.io/nansen/reference/countries.html</loc>
+    <loc>https://github.com/PopulationStatistics/refugees/reference/countries.html</loc>
   </url>
   <url>
-    <loc>https://galalh.github.io/nansen/reference/demographics.html</loc>
+    <loc>https://github.com/PopulationStatistics/refugees/reference/demographics.html</loc>
   </url>
   <url>
-    <loc>https://galalh.github.io/nansen/reference/idmc.html</loc>
+    <loc>https://github.com/PopulationStatistics/refugees/reference/flows.html</loc>
   </url>
   <url>
-    <loc>https://galalh.github.io/nansen/reference/index.html</loc>
+    <loc>https://github.com/PopulationStatistics/refugees/reference/idmc.html</loc>
   </url>
   <url>
-    <loc>https://galalh.github.io/nansen/reference/nansen-package.html</loc>
+    <loc>https://github.com/PopulationStatistics/refugees/reference/index.html</loc>
   </url>
   <url>
-    <loc>https://galalh.github.io/nansen/reference/population.html</loc>
+    <loc>https://github.com/PopulationStatistics/refugees/reference/nansen-package.html</loc>
   </url>
   <url>
-    <loc>https://galalh.github.io/nansen/reference/solutions.html</loc>
+    <loc>https://github.com/PopulationStatistics/refugees/reference/population.html</loc>
   </url>
   <url>
-    <loc>https://galalh.github.io/nansen/reference/unrwa.html</loc>
+    <loc>https://github.com/PopulationStatistics/refugees/reference/refugees-package.html</loc>
+  </url>
+  <url>
+    <loc>https://github.com/PopulationStatistics/refugees/reference/solutions.html</loc>
+  </url>
+  <url>
+    <loc>https://github.com/PopulationStatistics/refugees/reference/unrwa.html</loc>
   </url>
 </urlset>

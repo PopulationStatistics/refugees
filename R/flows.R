@@ -1,0 +1,33 @@
+#' Forced displacement flow dataset
+#'
+#' UNHCR has published a new dataset recording the number of people forced to flee
+#' during each of the years since 1962. This dataset presents the forced displacement flows.
+#'
+#' See the notes on the curation process in the
+#' \href{https://www.unhcr.org/refugee-statistics/insights/explainers/forcibly-displaced-flow-data.html}{Data Insights}
+#' for more details.
+#'
+#' @format A tibble.
+#' \describe{
+#'  \item{year}{The year (e.g. 2020).}
+#'  \item{coo_name}{Country of origin name.}
+#'  \item{coo}{Country of origin UNHCR code.}
+#'  \item{coo_iso}{Country of origin ISO code.}
+#'  \item{coa_name}{Country of asylum name.}
+#'  \item{coa}{Country of asylum UNHCR code.}
+#'  \item{coa_iso}{Country of asylum ISO code.}
+#'  \item{refugees}{Refugee Arrivals: includes prima facie (group recognition) refugees
+#'   and those who have received temporary protection. The first available data for this
+#'   group is for 1962. People in refugee-like situations are also included from 2007.}
+#'  \item{asylum_seekers}{New Asylum Applications: are new asylum applications registered
+#'  during each year. Repeat and appeal applications have been excluded.
+#'  The first year that published data for this population group became available is 1970
+#'  and only for a limited number of high-income countries, with data from more countries available from 2000.}
+#'  \item{returned_refugees}{Refugees who have returned home within the previous year.}
+#'  \item{oip}{Other people in need of international protection:
+#'  includes just the new arrivals of this population group, first reported in 2018.}
+#' }
+#' @source \href{https://www.unhcr.org/refugee-statistics/}{UNHCR Refugee Data Finder}.
+#' @examples
+#' flows
+"flows"
