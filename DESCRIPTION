@@ -12,14 +12,16 @@ Authors@R: c(person(given = "Hisham",
                     role = "ctb"),
              person("UNHCR",
                     role = "cph"))
-Description: The UNHCR Refugee Population Statistics Database
+Description: The UN Refugee Agency (UNHCR) Refugee Population Statistics Database
     contains information about forcibly displaced populations
     spanning more than 70 years of statistical activities.
     It covers displaced populations such as refugees, asylum-seekers and
     internally displaced people, including their demographics.
     Stateless people are also included, most of who have never been displaced.
     The database also reflects the different types of solutions
-    for displaced populations such as repatriation or resettlement.
+    for displaced populations such as repatriation or resettlement. 
+    More information on the UNHCR Refugee Population Statistics Database
+    can be found at <https://www.unhcr.org/refugee-statistics/>.
 License: CC BY 4.0
 LazyData: true
 LazyDataCompression: xz

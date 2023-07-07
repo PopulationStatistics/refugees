@@ -6,7 +6,7 @@
 \alias{refugees-package}
 \title{refugees: UNHCR Refugee Population Statistics Database}
 \description{
-The UNHCR Refugee Population Statistics Database contains information about forcibly displaced populations spanning more than 70 years of statistical activities. It covers displaced populations such as refugees, asylum-seekers and internally displaced people, including their demographics. Stateless people are also included, most of who have never been displaced. The database also reflects the different types of solutions for displaced populations such as repatriation or resettlement.
+The UN Refugee Agency (UNHCR) Refugee Population Statistics Database contains information about forcibly displaced populations spanning more than 70 years of statistical activities. It covers displaced populations such as refugees, asylum-seekers and internally displaced people, including their demographics. Stateless people are also included, most of who have never been displaced. The database also reflects the different types of solutions for displaced populations such as repatriation or resettlement. More information on the UNHCR Refugee Population Statistics Database can be found at \url{https://www.unhcr.org/refugee-statistics/}.
 }
 \author{
 \strong{Maintainer}: Hisham Galal \email{galal@unhcr.org}
