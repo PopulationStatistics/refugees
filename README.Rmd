@@ -107,6 +107,8 @@ ref_coo_10 |>
               axis_text = "y")
 ```
 
+For more examples, see [How to use UNHCR’s refugees R package](https://www.unhcr.org/refugee-statistics/insights/explainers/refugees-r-package.html).
+
 ## License
 
 This package is released under the [Creative Commons Attribution 4.0 International Public License](https://creativecommons.org/licenses/by/4.0/).

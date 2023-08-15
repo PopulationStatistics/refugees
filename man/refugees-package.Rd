@@ -8,6 +8,15 @@
 \description{
 The Refugee Population Statistics Database published by The Office of The United Nations High Commissioner for Refugees (UNHCR) contains information about forcibly displaced populations spanning more than 70 years of statistical activities. It covers displaced populations such as refugees, asylum-seekers and internally displaced people, including their demographics. Stateless people are also included, most of who have never been displaced. The database also reflects the different types of solutions for displaced populations such as repatriation or resettlement. More information on the data and methodology can be found on the UNHCR Refugee Data Finder \url{https://www.unhcr.org/refugee-statistics/}.
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://populationstatistics.github.io/refugees/}
+  \item \url{https://github.com/PopulationStatistics/refugees}
+  \item Report bugs at \url{https://github.com/PopulationStatistics/refugees/issues}
+}
+
+}
 \author{
 \strong{Maintainer}: Hisham Galal \email{galal@unhcr.org}
 

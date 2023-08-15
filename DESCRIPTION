@@ -1,7 +1,7 @@
 Package: refugees
 Type: Package
 Title: UNHCR Refugee Population Statistics Database
-Version: 2022.12.0
+Version: 2022.12.1
 Authors@R: c(person(given = "Hisham",
                     family = "Galal",
                     email = "galal@unhcr.org",
@@ -23,6 +23,8 @@ Description: The Refugee Population Statistics Database published by
     for displaced populations such as repatriation or resettlement. 
     More information on the data and methodology can be found on
     the UNHCR Refugee Data Finder <https://www.unhcr.org/refugee-statistics/>.
+URL: https://populationstatistics.github.io/refugees/, https://github.com/PopulationStatistics/refugees
+BugReports: https://github.com/PopulationStatistics/refugees/issues
 License: CC BY 4.0
 LazyData: true
 LazyDataCompression: xz

@@ -152,6 +152,9 @@ ref_coo_10 |>
 
 <img src="man/figures/README-unnamed-chunk-6-1.png" width="100%" />
 
+For more examples, see [How to use UNHCR’s refugees R
+package](https://www.unhcr.org/refugee-statistics/insights/explainers/refugees-r-package.html).
+
 ## License
 
 This package is released under the [Creative Commons Attribution 4.0
