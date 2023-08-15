@@ -14,7 +14,6 @@ unhcr_no_region <-
 corrections <-
   tribble(~code,  ~iso, ~name,                                          ~unhcr_region,
           "SGS", "SGS", "South Georgia and the South Sandwich Islands", "Europe",
-          "KOS",    NA, "Kosovo",                                       "Europe",
           "TIB",    NA, "Tibetan",                                      "Asia and the Pacific",
           # FIXME: the next two ISO codes are for machine-readable passports, not countries.
           # Should we keep them? The first appears in the API but the second doesn't.
