@@ -12,7 +12,7 @@ flows <-
   pivot_wider(names_from = PT, values_from = Count) |>
   select(year = Year,
          coo_name = OriginName, coo = origin, coo_iso = OriginISO,
-         coa_name = AsylumName, coa = asylum, coa_iso = AsylumName,
+         coa_name = AsylumName, coa = asylum, coa_iso = AsylumISO,
          refugees = REF, asylum_seekers = ASY, returned_refugees = ROC, oip = OIP)
 
 usethis::use_data(flows, overwrite = TRUE)
