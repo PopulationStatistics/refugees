@@ -1,4 +1,4 @@
-# refugees 2023.06.0
+# refugees 2023.6.0
 
 * Updated with the release of [Mid-Year Trends 2023](https://www.unhcr.org/mid-year-trends-report-2023).
 
