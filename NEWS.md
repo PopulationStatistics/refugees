@@ -1,3 +1,7 @@
+# refugees 2023.06.0
+
+* Updated with the release of [Mid-Year Trends 2023](https://www.unhcr.org/mid-year-trends-report-2023).
+
 # refugees 2022.12.1
 
 * Updates to the demographics table. Now includes previously missing 2021 data and corrections to the 2013, 2014, and 2022 data from the initial release.
