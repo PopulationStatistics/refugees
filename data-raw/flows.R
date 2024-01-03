@@ -13,6 +13,6 @@ flows <-
   select(year = Year,
          coo_name = OriginName, coo = origin, coo_iso = OriginISO,
          coa_name = AsylumName, coa = asylum, coa_iso = AsylumISO,
-         refugees = REF, asylum_seekers = ASY, returned_refugees = ROC, oip = OIP)
+         refugees = REF, asylum_seekers = ASY, refugee_like = ROC, oip = OIP)
 
 usethis::use_data(flows, overwrite = TRUE)
