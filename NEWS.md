@@ -1,3 +1,8 @@
+# refugees 2023.12.0
+
+* Updated with the release of [Global Trends 2023](https://www.unhcr.org/global-trends-report-2023).
+* Corrected field label in the flows dataset (`returned_refugees` -> `refugee_like`)
+
 # refugees 2023.6.0
 
 * Updated with the release of [Mid-Year Trends 2023](https://www.unhcr.org/mid-year-trends-report-2023).
