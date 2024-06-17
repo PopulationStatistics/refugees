@@ -84,7 +84,7 @@ ref_coo_10 <- refugees::population |>
 ref_coo_10
 ```
 
-We can use `ggplot2` and the [`unhcrthemes`](https://github.com/vidonne/unhcrthemes) to visualize our data following the [UNHCR data visualization guidelines](https://dataviz.unhcr.org/general_guidance/).
+We can use `ggplot2` and the [`unhcrthemes`](https://github.com/unhcr-dataviz/unhcrthemes) to visualize our data following the [UNHCR data visualization guidelines](https://dataviz.unhcr.org/general_guidance/).
 
 ```{r, fig.width = 6, fig.height = 4, fig.retina=2}
 library(ggplot2)
