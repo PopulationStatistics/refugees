@@ -1,7 +1,7 @@
 Package: refugees
 Type: Package
 Title: UNHCR Refugee Population Statistics Database
-Version: 2023.6.0
+Version: 2023.12.0
 Authors@R: c(person(given = "Hisham",
                     family = "Galal",
                     email = "galal@unhcr.org",
@@ -35,6 +35,6 @@ Imports:
 Suggests:
     testthat (>= 3.1.0)
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.2.3
+RoxygenNote: 7.3.1
 Encoding: UTF-8
 Config/testthat/edition: 3
