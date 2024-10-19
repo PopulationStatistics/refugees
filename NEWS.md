@@ -1,3 +1,7 @@
+# refugees 2024.6.0
+
+* Updated with the release of [Mid-Year Trends 2024](https://www.unhcr.org/mid-year-trends-report-2024).
+
 # refugees 2023.12.0
 
 * Updated with the release of [Global Trends 2023](https://www.unhcr.org/global-trends-report-2023).

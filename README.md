@@ -141,7 +141,7 @@ ref_coo_10 |>
             hjust = -0.2) +
   scale_x_continuous(expand = expansion(mult = c(0, 0.1))) +
   labs(title = "Refugees, people in refugee-like situations and other people in need of international protection",
-       subtitle = "By country of origin | end-2023",
+       subtitle = "By country of origin | mid-2024",
        caption = "Source: UNHCR Refugee Data Finder") +
   theme_unhcr(font_size = 12,
               grid = FALSE,

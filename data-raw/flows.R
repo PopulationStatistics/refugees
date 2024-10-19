@@ -4,7 +4,7 @@ library(httr)
 
 tmpf <- fs::file_temp(ext = "xlsx")
 
-GET("https://unhcr-web.github.io/refugee-statistics/data/UNHCR_Flow_Data.xlsx",
+GET("https://www.unhcr.org/refugee-statistics/insights/data/UNHCR_Flow_Data.xlsx",
     write_disk(tmpf))
 
 flows <-

@@ -1,57 +1,21 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://github.com/PopulationStatistics/refugees/404.html</loc>
-  </url>
-  <url>
-    <loc>https://github.com/PopulationStatistics/refugees/authors.html</loc>
-  </url>
-  <url>
-    <loc>https://github.com/PopulationStatistics/refugees/CODE_OF_CONDUCT.html</loc>
-  </url>
-  <url>
-    <loc>https://github.com/PopulationStatistics/refugees/index.html</loc>
-  </url>
-  <url>
-    <loc>https://github.com/PopulationStatistics/refugees/LICENSE.html</loc>
-  </url>
-  <url>
-    <loc>https://github.com/PopulationStatistics/refugees/news/index.html</loc>
-  </url>
-  <url>
-    <loc>https://github.com/PopulationStatistics/refugees/reference/asylum_applications.html</loc>
-  </url>
-  <url>
-    <loc>https://github.com/PopulationStatistics/refugees/reference/asylum_decisions.html</loc>
-  </url>
-  <url>
-    <loc>https://github.com/PopulationStatistics/refugees/reference/countries.html</loc>
-  </url>
-  <url>
-    <loc>https://github.com/PopulationStatistics/refugees/reference/demographics.html</loc>
-  </url>
-  <url>
-    <loc>https://github.com/PopulationStatistics/refugees/reference/flows.html</loc>
-  </url>
-  <url>
-    <loc>https://github.com/PopulationStatistics/refugees/reference/idmc.html</loc>
-  </url>
-  <url>
-    <loc>https://github.com/PopulationStatistics/refugees/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>https://github.com/PopulationStatistics/refugees/reference/nansen-package.html</loc>
-  </url>
-  <url>
-    <loc>https://github.com/PopulationStatistics/refugees/reference/population.html</loc>
-  </url>
-  <url>
-    <loc>https://github.com/PopulationStatistics/refugees/reference/refugees-package.html</loc>
-  </url>
-  <url>
-    <loc>https://github.com/PopulationStatistics/refugees/reference/solutions.html</loc>
-  </url>
-  <url>
-    <loc>https://github.com/PopulationStatistics/refugees/reference/unrwa.html</loc>
-  </url>
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>https://github.com/PopulationStatistics/refugees/404.html</loc></url>
+<url><loc>https://github.com/PopulationStatistics/refugees/authors.html</loc></url>
+<url><loc>https://github.com/PopulationStatistics/refugees/CODE_OF_CONDUCT.html</loc></url>
+<url><loc>https://github.com/PopulationStatistics/refugees/index.html</loc></url>
+<url><loc>https://github.com/PopulationStatistics/refugees/LICENSE.html</loc></url>
+<url><loc>https://github.com/PopulationStatistics/refugees/news/index.html</loc></url>
+<url><loc>https://github.com/PopulationStatistics/refugees/reference/asylum_applications.html</loc></url>
+<url><loc>https://github.com/PopulationStatistics/refugees/reference/asylum_decisions.html</loc></url>
+<url><loc>https://github.com/PopulationStatistics/refugees/reference/countries.html</loc></url>
+<url><loc>https://github.com/PopulationStatistics/refugees/reference/demographics.html</loc></url>
+<url><loc>https://github.com/PopulationStatistics/refugees/reference/flows.html</loc></url>
+<url><loc>https://github.com/PopulationStatistics/refugees/reference/idmc.html</loc></url>
+<url><loc>https://github.com/PopulationStatistics/refugees/reference/index.html</loc></url>
+<url><loc>https://github.com/PopulationStatistics/refugees/reference/nansen-package.html</loc></url>
+<url><loc>https://github.com/PopulationStatistics/refugees/reference/population.html</loc></url>
+<url><loc>https://github.com/PopulationStatistics/refugees/reference/refugees-package.html</loc></url>
+<url><loc>https://github.com/PopulationStatistics/refugees/reference/solutions.html</loc></url>
+<url><loc>https://github.com/PopulationStatistics/refugees/reference/unrwa.html</loc></url>
 </urlset>
+
