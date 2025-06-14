@@ -78,7 +78,7 @@ easily get data on forced displacement or statelessness.
 library(refugees)
 library(dplyr)
 glimpse(refugees::population)
-#> Rows: 126,402
+#> Rows: 132,602
 #> Columns: 16
 #> $ year              <dbl> 1951, 1951, 1951, 1951, 1951, 1951, 1951, 1951, 1951…
 #> $ coo_name          <chr> "Unknown", "Unknown", "Unknown", "Unknown", "Unknown…
@@ -127,7 +127,7 @@ ref_coo_10
 We can use `ggplot2` and the
 [`unhcrthemes`](https://github.com/unhcr-dataviz/unhcrthemes) to
 visualize our data following the [UNHCR data visualization
-guidelines](https://dataviz.unhcr.org/general_guidance/).
+guidelines](https://dataviz.unhcr.org/).
 
 ``` r
 library(ggplot2)
