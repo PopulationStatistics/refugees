@@ -18,7 +18,7 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: UNHCR \email{stats@unhcr.org}
+\strong{Maintainer}: UNHCR \email{stats@unhcr.org} [copyright holder]
 
 Authors:
 \itemize{
