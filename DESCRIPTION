@@ -10,8 +10,12 @@ Authors@R: c(person(given = "Hisham",
                     family = "Dicko",
                     email = "mail@ahmadoudicko.com",
                     role = "aut"),
+             person(given = "Janis", 
+                    family = "Kreuder", 
+                    email = "kreuder@unhcr.org", 
+                    role = "cre"),
              person("UNHCR",
-                    role = c("cre", "cph"),
+                    role = "cph",
                     email = "stats@unhcr.org"))
 Description: The Refugee Population Statistics Database published by
     The Office of The United Nations High Commissioner for Refugees (UNHCR)
