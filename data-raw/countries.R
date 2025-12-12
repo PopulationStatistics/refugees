@@ -14,8 +14,7 @@ unhcr <-
 unsd <-
   request("https://unstats.un.org/unsd/methodology/m49/overview") |>
   req_perform() |>
-  resp_body_string() |>
-  read_html() |>
+  resp_body_html() |>
   html_table() |>
   pluck(1) |>
   select(iso_code = X12,
