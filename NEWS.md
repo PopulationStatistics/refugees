@@ -1,3 +1,7 @@
+# refugees 2025.6.1
+
+* Updates to refugee return figures for 2022 and 2023 (retroactive).
+
 # refugees 2025.6.0
 
 * Updated with the release of [Mid-Year Trends 2025](https://www.unhcr.org/mid-year-trends-report-2025).
