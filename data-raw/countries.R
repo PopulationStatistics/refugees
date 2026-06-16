@@ -1,33 +1,20 @@
 library(tidyverse)
+library(httr2)
 library(rvest)
 
-unhcr_by_region <-
-  jsonlite::fromJSON("https://api.unhcr.org/population/v1/regions")$items |>
-  transmute(unhcr_region = name,
-            data = map(id, \(x) jsonlite::fromJSON(glue::glue("https://api.unhcr.org/population/v1/countries?unhcr_region={x}"))$items)) |>
-  unnest(data)
-
-unhcr_no_region <-
-  anti_join(jsonlite::fromJSON(glue::glue("https://api.unhcr.org/population/v1/countries"))$items,
-            unhcr_by_region, by = "code")
-
-corrections <-
-  tribble(~code,  ~iso, ~name,                                          ~unhcr_region,
-          "SGS", "SGS", "South Georgia and the South Sandwich Islands", "Europe",
-          "TIB",    NA, "Tibetan",                                      "Asia and the Pacific",
-          # FIXME: the next two ISO codes are for machine-readable passports, not countries.
-          # Should we keep them? The first appears in the API but the second doesn't.
-          "STA", "XXA", "Stateless",                                    NA,
-          "UKN", "XXX", "Unknown",                                      NA)
-
 unhcr <-
-  bind_rows(unhcr_by_region, unhcr_no_region) |>
-  rows_update(corrections, by = "code") |>
-  select(iso_code = iso, unhcr_code = code, name, unhcr_region) |>
-  arrange(name)
+  request("https://www.unhcr.org/refugee-statistics/insights/data/Annex_Countries.csv") |>
+  req_headers(Referer = "https://www.unhcr.org/") |>
+  req_perform() |>
+  resp_body_string() |>
+  read_csv() |>
+  select(iso_code = ISO3_Country_Code, unhcr_code = UNHCR_Country_Code,
+         name = UNSD_Name, unhcr_region = UNHCR_Region_Name)
 
-m49 <-
-  session("https://unstats.un.org/unsd/methodology/m49/overview") |>
+unsd <-
+  request("https://unstats.un.org/unsd/methodology/m49/overview") |>
+  req_perform() |>
+  resp_body_html() |>
   html_table() |>
   pluck(1) |>
   select(iso_code = X12,
@@ -35,6 +22,26 @@ m49 <-
          unsd_subregion = X6,
          unsd_imregion = X8)
 
-countries <- left_join(unhcr, m49)
+# Present in the population table but not the GT annexes
+tib <- tibble(unhcr_code = "TIB",
+              iso_code = "TIB",
+              name = "Tibetan",
+              unhcr_region = "Asia and the Pacific",
+              unsd_region = "Asia",
+              unsd_subregion = "Eastern Asia")
+
+# Country name spelled differently between annex and data tables
+cuw <- tibble(unhcr_code = "CUW",
+              name = "Curacao")
+
+# ISO code is recorded as "UNK" in data tables. "UKN" in the annexes.
+ukn <- tibble(unhcr_code = "UKN",
+              iso_code = "UNK")
+
+countries <-
+  left_join(unhcr, unsd) |>
+  rows_upsert(tib) |>
+  rows_upsert(cuw) |>
+  rows_upsert(ukn)
 
 usethis::use_data(countries, overwrite = TRUE)
