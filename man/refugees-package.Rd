@@ -18,12 +18,17 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: UNHCR \email{stats@unhcr.org} [copyright holder]
+\strong{Maintainer}: Janis Kreuder \email{kreuder@unhcr.org}
 
 Authors:
 \itemize{
   \item Hisham Galal \email{galal@unhcr.org}
   \item Ahmadou Dicko \email{mail@ahmadoudicko.com}
+}
+
+Other contributors:
+\itemize{
+  \item UNHCR \email{stats@unhcr.org} [copyright holder]
 }
 
 }
