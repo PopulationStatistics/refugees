@@ -1,3 +1,9 @@
+# refugees 2025.12.1
+
+* Updated figures for asylum-seekers in 2025 (also in application and decision data) due to correction
+* Correction in flows dataset to account for structural changes in source data
+* Automatic reminder/warning to users to update package for latest data once available
+
 # refugees 2025.12.0
 
 * Updated with the release of [Global Trends 2025](https://www.unhcr.org/global-trends-report-2025).

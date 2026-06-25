@@ -21,7 +21,8 @@ curl::curl_download("https://www.unhcr.org/refugee-statistics/insights/data/UNHC
 
 flows <-
   read_excel(tmpf, sheet = "DATA") |>
-  pivot_wider(names_from = PT, values_from = Count) |>
+  mutate(PT = recode(PT, "GRP" = "REF", "TMP" = "REF", "ASR" = "ASY")) |>
+  pivot_wider(names_from = PT, values_from = Count, values_fn = sum) |>
   select(year = Year,
          coo_name = OriginName, coo = origin, coo_iso = OriginISO,
          coa_name = AsylumName, coa = asylum, coa_iso = AsylumISO,
