@@ -1,5 +1,5 @@
 # refugees 2025.12.2
-* Correction for demographics data which was falsely wrongly to 2025. 
+* Correction for demographics data which was wrongly limited to 2025. 
 
 # refugees 2025.12.1
 
