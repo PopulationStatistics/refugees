@@ -1,33 +1,17 @@
 library(tidyverse)
+library(httr2)
 
 fetch_dataset <- function(dataset, ...) {
-  read_json <- insistently(jsonlite::fromJSON, rate = rate_delay(60))
-  results_per_page <- 10000
-
-  rdf_url <- function(dataset, ...) {
-    httr::modify_url("https://api.unhcr.org/",
-                     path = glue::glue("/population/v1/{dataset}"),
-                     query = rlang::list2(coo_all = "true",
-                                          coa_all = "true",
-                                          ...))
-  }
-
-  fetch_page <- function(page) {
-    rdf_url(dataset, limit = results_per_page, page = page, ...) |>
-      read_json() |>
-      pluck("items") |>
-      mutate(across(everything(), as.character))
-  }
-
-  pages <-
-    rdf_url(dataset, limit = 1, page = 1, ...) |>
-    read_json() |>
-    pluck("maxPages")
-
-  map(1:ceiling(pages/results_per_page),
-      fetch_page,
-      .progress = dataset) |>
-    list_rbind() |>
+  request("https://api.unhcr.org/") |>
+    req_url_path("population", "v1", dataset) |>
+    req_url_query(coo_all = "true", coa_all = "true", limit = 10000, ...) |>
+    req_retry(max_tries = 10,
+              backoff = \(resp) 60) |>
+    req_perform_iterative(max_reqs = Inf,
+                          next_req = iterate_with_offset(param_name = "page",
+                                                         resp_pages = \(resp) resp_body_json(resp)$maxPages)) |>
+    resps_data(\(resp) resp_body_json(resp, simplifyVector = T)$items |>
+                 mutate(across(everything(), as.character))) |>
     type_convert(na = "-") |>
     select(-coo_id, -coa_id) |>
     as_tibble()
