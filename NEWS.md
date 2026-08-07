@@ -1,3 +1,6 @@
+# refugees 2025.12.2
+* Correction for demographics data which was falsely wrongly to 2025. 
+
 # refugees 2025.12.1
 
 * Updated figures for asylum-seekers in 2025 (also in application and decision data) due to correction
