@@ -1,7 +1,7 @@
 Package: refugees
 Type: Package
 Title: UNHCR Refugee Population Statistics Database
-Version: 2025.12.2
+Version: 2025.12.3
 Authors@R: c(person(given = "Hisham",
                     family = "Galal",
                     email = "galal@unhcr.org",
@@ -13,7 +13,15 @@ Authors@R: c(person(given = "Hisham",
              person(given = "Janis", 
                     family = "Kreuder", 
                     email = "kreuder@unhcr.org", 
+                    role = "aut"),
+             person(given = "Hyunju", 
+                    family = "Park", 
+                    email = "park@unhcr.org", 
                     role = "cre"),
+             person(given = "Edgar", 
+                    family = "Scrase", 
+                    email = "scrase@unhcr.org", 
+                    role = "aut"),
              person("UNHCR",
                     role = "cph",
                     email = "stats@unhcr.org"))
