@@ -1,3 +1,7 @@
+# refugees 2025.12.3
+
+* Change of package maintainer (temporary).
+
 # refugees 2025.12.2
 * Correction for demographics data which was wrongly limited to 2025. 
 
