@@ -1,3 +1,6 @@
+# refugees 2026.6.1
+* Updated with the release of [Mid-Year Trends 2026](https://www.unhcr.org/media/mid-year-trends-2026)
+
 # refugees 2025.12.3
 
 * Change of package maintainer (temporary).
