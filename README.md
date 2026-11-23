@@ -125,7 +125,7 @@ ref_coo_10
 ```
 
 We can use `ggplot2` and the
-[`unhcrthemes`](https://github.com/unhcr-dataviz/unhcrthemes) to
+[`unhcrthemes`](https://github.com/vidonne/unhcrthemes) to
 visualize our data following the [UNHCR data visualization
 guidelines](https://dataviz.unhcr.org/).
 
